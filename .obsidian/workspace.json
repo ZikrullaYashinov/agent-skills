@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "integrations/antigravity.md",
+                "file": "README.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "antigravity"
+              "title": "README"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "integrations/antigravity.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "integrations/antigravity.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "integrations/antigravity.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,14 +202,15 @@
   },
   "active": "8ae7fe44f45e36c7",
   "lastOpenFiles": [
+    "Dashboard.md",
+    "README.md",
+    "integrations/antigravity.md",
     "integrations/universal-init.md",
     "integrations/cursor-codex.md",
     "integrations/claude-code.md",
-    "integrations/antigravity.md",
     "skills/antigravity-sync.md",
     "integrations",
     "skills/git-branch-review.md",
-    "Dashboard.md",
     "templates/skill-template.md",
     "skills/git-branch-review1.md.md",
     "Untitled.canvas",
