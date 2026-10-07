@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "skills/clean-review.md",
+                "file": "skills/apex-support-docs-sync.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "clean-review"
+              "title": "apex-support-docs-sync"
             }
           }
         ]
@@ -202,8 +202,9 @@
   },
   "active": "8ae7fe44f45e36c7",
   "lastOpenFiles": [
-    "skills/implement.md",
     "skills/clean-review.md",
+    "skills/apex-support-docs-sync.md",
+    "skills/implement.md",
     "skills/skill-creator.md",
     "skills/git-branch-review.md",
     "skills/commit-msg.md",
