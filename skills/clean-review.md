@@ -28,9 +28,10 @@ Har qanday modul tahlil qilinayotganda quyidagi 7 ta qatlam talablariga solishti
 
 ### 1. Controller Qatlami (Thin Controller)
 - **Faqat so'rov va javob**: Hech qanday biznes mantiq bo'lmasligi, faqat request parsing, DTO validatsiyasi (`@Valid`), context uzatish va servisga delegatsiya.
-- **Importlar tozaligi**: Wildcard importlar (`import org.springframework.web.bind.annotation.*`) QAT'IYAN TAQIQLANADI.
+- **REST Semantikasi (No untyped Map)**: DELETE operatsiyalarida no-typed `Map<String, String>` o'rniga `204 No Content` (`ResponseEntity.noContent().build()`) yoki qat'iy tiplangan Response DTO qaytarilishi shart.
+- **Importlar madaniyati**: Standart Spring Web annotatsiyalari uchun IDEA avtomatik guruhlagan wildcard (`import org.springframework.web.bind.annotation.*`) ga ruxsat beriladi; faqat nomlar to'qnashuvi (Name collision) xavfi bo'lgandagina aniq importlar talab qilinadi.
 - **Context olish (DRY)**: Har bir endpointda `val context = OperatorContext.require()` takrorlanmasligi kerak. Klass darajasidagi hisoblangan xossa (`private val currentOperator: AuthenticatedOperator get() = OperatorContext.require()`) orqali markazlashtirilishi lozim.
-- **Validatsiya**: Yo'l parametrlari tekshiruvi uchun klass darajasida `@Validated`, `@PathVariable` da `@Positive` bo'lishi.
+- **Ortiqcha validatsiyalardan tiyilish**: Metod parametrlari (`@PathVariable id: Long`) uchun agar biznesda qat'iy cheklov bo'lmasa, ortiqcha `@Validated` va `@Positive` bilan kod og'irlashtirilmasligi kerak (servisdagi 404 yetarli). Asosiy urg'u so'rov tanasidagi DTO validatsiyasiga (`@Valid @RequestBody`) qaratiladi.
 - **Kotlin Expression Body**: Ortiqcha bir martalik o'zgaruvchilarsiz (`val created = ...`) va qatorlarsiz toza ifodali sintaksis (`= ResponseEntity.ok(...)`).
 
 ### 2. Service Qatlami (SRP & Orchestration)
@@ -42,7 +43,8 @@ Har qanday modul tahlil qilinayotganda quyidagi 7 ta qatlam talablariga solishti
 
 ### 3. Repository Qatlami (Spring Data JPA)
 - **N+1 muammolari yo'qligi**: O'qiladigan lazy munosabatlar uchun `@EntityGraph(attributePaths = [...])` yoki `JOIN FETCH` mavjudligi.
-- **Indekslar va xavfsiz qidiruv**: Qidiruvlar loyiha filtri (`projectId`) va indekslangan kalitlar bo'yicha to'g'ri nomlangan bo'lishi (`findByProjectIdAndShortcut`).
+- **In-Memory Filtering o'rniga DB Projections**: Barcha yozuvlarni xotiraga tortib (`findAll().filter { ... }`) filterlash taqiqlanadi; ma'lumotlar bazasi darajasidagi optimallashtirilgan so'rovlar yoki projectionlar (`@Query("SELECT p.coreAgentId FROM ...")`) ishlatilishi shart.
+- **Dead Code tozaligi**: Loyihada chaqirilmaydigan, foydalanilmayotgan (unused) repository metodlari va so'rovlari aniqlanib tozalanadi.
 
 ### 4. Entity Qatlami (Rich Domain Model)
 - **Inkapsulyatsiya**: Maydonlar maksimal darajada `val`, faqat domen o'zgaruvchilari `var`.
@@ -55,12 +57,13 @@ Har qanday modul tahlil qilinayotganda quyidagi 7 ta qatlam talablariga solishti
 
 ### 6. DTO Qatlami (Data Contracts)
 - **Aniq ajralish**: Request (`Create...Request`, `Update...Request`) va Response (`...Dto`, `...Response`) sinflari alohida bo'lishi.
-- **Qat'iy validatsiya**: Request modellarida Bean Validation (`@field:NotBlank`, `@field:NotNull`, `@field:Size`) annotatsiyalari to'liq bo'lishi.
+- **Kotlin Null-Safety & Bean Validation uyg'unligi**: Barcha maydonlar qat'iy `val` bo'lishi shart (`var` taqiqlanadi). Agar `@field:NotNull` annotatsiyasi ishlatilsa, Jackson deserializatsiyasi va Spring `@Valid` to'g'ri ishlashi uchun maydon nullable (`val field: Type? = null`) bo'lishi shart. Kotlin non-nullable maydonlariga ortiqcha `@field:NotNull` qo'yilmaydi.
 - **Immutability**: Barcha maydonlar faqat `val` bo'lishi va hech qanday biznes logikani o'z ichiga olmasligi.
 
 ### 7. Exception & Testing Qatlami
 - **Domen xatoliklari**: `exception/` paketida aniq nomlangan exceptionlar (`NotFoundException`, `ConflictException`) mavjudligi.
 - **Test qamrovi**: Controller va Service qatlamlari uchun to'liq unit testlar (`*ControllerTest.kt`, `*ServiceTest.kt`) mavjudligi yoki rejalashtirilishi.
+- **Dead Code & Unused Elements**: Loyihaning barcha qatlamlarida foydalanilmayotgan eskirgan kodlar, keraksiz metodlar tahlil qilinadi va tozalanadi.
 
 ---
 
