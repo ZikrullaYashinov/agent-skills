@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "skills/antigravity-sync.md",
+                "file": "integrations/antigravity.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "antigravity-sync"
+              "title": "antigravity"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "skills/antigravity-sync.md",
+                "file": "integrations/antigravity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "skills/antigravity-sync.md",
+                "file": "integrations/antigravity.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "skills/antigravity-sync.md",
+                "file": "integrations/antigravity.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,13 +202,13 @@
   },
   "active": "8ae7fe44f45e36c7",
   "lastOpenFiles": [
+    "integrations/universal-init.md",
     "integrations/cursor-codex.md",
     "integrations/claude-code.md",
     "integrations/antigravity.md",
-    "integrations/universal-init.md",
+    "skills/antigravity-sync.md",
     "integrations",
     "skills/git-branch-review.md",
-    "skills/antigravity-sync.md",
     "Dashboard.md",
     "templates/skill-template.md",
     "skills/git-branch-review1.md.md",
