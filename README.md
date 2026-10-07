@@ -1,59 +1,89 @@
 # 🤖 AI Agent Skills Hub
 
-Ushbu repozitoriy AI Coding Agentlar (Antigravity, Claude Code, Cursor, Codex) uchun standartlashtirilgan, qayta ishlatiluvchi **Agentic Skills** to'plamidir.
+Ushbu repozitoriy barcha AI Coding Agentlar (**Antigravity, Claude Code, Cursor, Codex**) uchun standartlashtirilgan, qayta ishlatiluvchi va markazlashgan **Agentic Skills** boshqaruv tizimidir.
+
+---
+
+## ⚡ Qanday ishlaydi? (Arxitektura)
+
+```text
+Obsidian (Yozish & Boshqarish) 
+       │
+       ▼
+    skills/ ──(Jonli symlink)──► .agent/workflows/ ──► Antigravity (Slash "/" menyusi)
+       │
+       ▼
+ GitHub (Avtomatik 10 daqiqalik zaxira / Sync)
+```
+
+1. **Obsidianda yozasiz:** Yangi skill shablon asosida `skills/` papkasida yaratiladi.
+2. **Antigravity darhol taniydi:** `.agent/workflows` papkasi to'g'ridan-to'g'ri `skills/` ga ulangan, shuning uchun chatda `/` bosganda darhol paydo bo'ladi.
+3. **GitHub saqlaydi:** `Obsidian Git` plagini har bir o'zgarishni orqa fonda avtomatik commit va push qilib boradi.
 
 ---
 
 ## 🚀 Yangi kompyuterda ishga tushirish (1 daqiqada)
 
-Plaginlarni qo'lda o'rnatish shart emas — barcha sozlamalar `.obsidian` ichida saqlangan.
+Plaginlar va sozlamalarni qo'lda o'rnatish shart emas — barcha konfiguratsiyalar `.obsidian` ichida saqlangan.
 
 1. **Reponi klon qiling:**
    ```bash
    git clone https://github.com/ZikrullaYashinov/agent-skills.git
    ```
-2. **Obsidian dasturini oching** va **"Open folder as vault"** ni bosib, klon qilingan papkani tanlang.
-3. Agar Obsidian birinchi ochilishda so'rasa:
-   - *"Trust author and enable plugins"* (Muallifga ishonish va plaginlarni yoqish) tugmasini bosing.
+2. **Obsidian dasturini oching** va **"Open folder as vault"** orqali klon qilingan papkani ko'rsating.
+3. Birinchi ochilishda:
+   - *"Trust author and enable plugins"* tugmasini bosing.
 4. **Git sozlamasini tekshiring:**
-   - Yangi kompyuteringizda GitHub SSH/HTTPS sozlangan bo'lsa, Obsidian Git avtomatik sinxronizatsiyani davom ettiradi.
+   - GitHub hisobingiz sozlangan bo'lsa, avtomatik sinxronizatsiya o'z-o'zidan ishlay boshlaydi.
 
 ---
 
 ## 📁 Papkalar tuzilishi
 
-- **`Dashboard.md`** — Dataview orqali barcha skillar, ularning parametrlari va teglarini ko'rsatib turuvchi asosiy boshqaruv paneli.
-- **`skills/`** — Barcha tayyor agent skillari (`.md`).
+- **`Dashboard.md`** — Dataview orqali barcha skillar, ularning parametrlari va teglarini ko'rsatuvchi asosiy boshqaruv paneli.
+- **`skills/`** — Barcha faol agent skillari (`.md`).
 - **`templates/`** — Yangi skill yaratish uchun universal shablon.
-- **`.agent/workflows`** — Antigravity agenti uchun avtomatik Slash (`/`) komandalar bog'lanmasi.
+- **`integrations/`** — Turli agentlar (Antigravity, Claude, Cursor) uchun integratsiya qo'llanmalari.
+- **`.agent/workflows`** — Antigravity agenti uchun avtomatik Slash (`/`) komandalar bog'lanmasi (symlink).
 
 ---
 
 ## 🛠️ Loyihalarga qanday ulanadi?
 
-### 1-usul: Antigravity Workspace sifatida (Eng osoni - Sinxronizatsiyasiz!)
-Antigravity-ga ushbu Obsidian papkasini loyiha (workspace) sifatida qo'shib qo'ying. Shunda har qanday boshqa loyihada ishlaganda ham barcha skillar avtomatik ravishda `/` menyusida chiqadi!
+### 1-usul: Antigravity Workspace sifatida (Eng osoni — Tavsiya etiladi ⭐)
+Antigravity loyihangizga (`Folders` bo'limiga) ushbu `obsidian/` papkasini qo'shib qo'ying. Shunda har qanday loyihada ishlaganda ham barcha skillar avtomatik ravishda `/` menyusida chiqadi (hech qanday nusxalash shart emas).
 
-### 2-usul: Symlink orqali (Boshqa loyihalar uchun)
-```bash
-# Loyiha ichida turib:
-ln -s ~/path/to/agent-skills/skills .agent/skills
-```
+### 2-usul: Boshqa agentlar uchun (Claude Code / Cursor)
+- **Claude Code:** `.claude/commands` papkasiga ulanadi.
+- **Cursor / Copilot:** `.cursor/rules` papkasiga bog'lanadi.
+*(Batafsil ma'lumot `integrations/` papkasidagi fayllarda keltirilgan).*
 
 ---
 
-## ✍️ Yangi skill qo'shish qoidalari
+## ✍️ Yangi skill qo'shish standarti
 
-Har bir skill quyidagi standart YAML frontmatter bilan boshlanishi shart:
+Har bir yangi skill quyidagi toza YAML frontmatter bilan boshlanishi kerak:
 
 ```markdown
 ---
 name: skill-nomi
-description: "Qisqacha tavsifi"
-tags: [kategoriya, soha]
+description: "Ushbu skill nima qilishi haqida qisqacha tavsif"
+tags: [soha, kategoriya]
 project: "loyiha_nomi"
-target_branch: "asosiy_branch"
-source_branch: "tekshiriladigan_branch"
+target_branch: "development"
+source_branch: "feature-branch"
 output_file: "REPORT.md"
 ---
+
+# Role & Objective
+...
+
+## Strict Constraints
+...
+
+## Execution Workflow
+...
+
+## Output Format
+...
 ```
