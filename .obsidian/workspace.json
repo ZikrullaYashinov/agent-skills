@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboard.md",
+                "file": "skills/git-branch-review.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Dashboard"
+              "title": "git-branch-review"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dashboard.md",
+                "file": "skills/git-branch-review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dashboard.md",
+                "file": "skills/git-branch-review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dashboard.md",
+                "file": "skills/git-branch-review.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,9 +202,9 @@
   },
   "active": "8ae7fe44f45e36c7",
   "lastOpenFiles": [
-    "skills/git-branch-review.md.md",
-    "templates/skill-template.md.md",
+    "templates/skill-template.md",
     "Dashboard.md",
+    "skills/git-branch-review.md",
     "skills/git-branch-review1.md.md",
     "Untitled.canvas",
     "skills/docker-optimize.md.md",
