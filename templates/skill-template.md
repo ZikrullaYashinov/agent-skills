@@ -2,6 +2,7 @@
 name: {{title}}
 description: "Qisqacha tavsifi"
 tags: [soha]
+version: "1.0.0"
 param1: "qiymat"
 param2: "qiymat"
 ---

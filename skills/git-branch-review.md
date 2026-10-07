@@ -6,6 +6,7 @@ tags:
   - code-review
   - clean-code
   - audit
+version: "1.0.0"
 project:
 target_branch: develop
 source_branch:

@@ -71,6 +71,7 @@ Har bir yangi skill quyidagi toza YAML frontmatter bilan boshlanishi kerak:
 name: skill-nomi
 description: "Ushbu skill nima qilishi haqida qisqacha tavsif"
 tags: [soha, kategoriya]
+version: "1.0.0"
 project: "loyiha_nomi"
 target_branch: "development"
 source_branch: "feature-branch"

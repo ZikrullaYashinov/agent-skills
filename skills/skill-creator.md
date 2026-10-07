@@ -2,6 +2,7 @@
 name: skill-creator
 description: Yangi g'oyadan xalqaro standartdagi to'liq tayyor AI Skill yaratadi va to'g'ridan-to'g'ri Obsidian skills papkasiga saqlaydi.
 tags: [meta, generator, skills, automation]
+version: "1.0.0"
 skill_idea: ""
 skill_name: ""
 obsidian_skills_path: "/Users/zikrulla/Desktop/obsidian/skills"
