@@ -6,7 +6,7 @@ tags:
   - code-review
   - clean-code
   - audit
-project: cardmon-api
+project: cardmon
 target_branch: develop
 source_branch: premium
 output_file: REVIEW_REPORT.md
