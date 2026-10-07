@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "skills/implement.md",
+                "file": "skills/clean-review.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "implement"
+              "title": "clean-review"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "skills/implement.md",
+                "file": "skills/clean-review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "skills/implement.md",
+                "file": "skills/clean-review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "skills/implement.md",
+                "file": "skills/clean-review.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,9 +202,9 @@
   },
   "active": "8ae7fe44f45e36c7",
   "lastOpenFiles": [
+    "skills/implement.md",
     "skills/clean-review.md",
     "skills/skill-creator.md",
-    "skills/implement.md",
     "skills/git-branch-review.md",
     "skills/commit-msg.md",
     "Dashboard.md",
