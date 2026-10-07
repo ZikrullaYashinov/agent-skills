@@ -2,7 +2,7 @@
 name: apex-support-docs-sync
 description: Apex Support backendidagi API, DTO, WebSocket va endpoint o'zgarishlarini tahlil qilib, FRONTEND_INTEGRATION_GUIDE.md va FRONTEND_LATEST_CHANGES.md hujjatlariga 100% aniqlik bilan sinxronlashtiruvchi ixtisoslashgan skill.
 tags: [apex-support, docs-sync, frontend-integration, api-docs, changelog, documentation]
-version: "1.0.0"
+version: "1.1.0"
 project: "/Users/zikrulla/IdeaProjects/apex-support"
 scope: ""
 ---
@@ -18,7 +18,11 @@ Maqsad: `$project` (Apex Support) loyihasidagi controllerlar, DTO lar, WebSocket
 - **Kodga 100% muvofiqlik (Anti-Hallucination)**: Hujjatdagi endpoint URL lari, HTTP metodlari, status kodlari (masalan: `204 No Content`, `200 OK`, `201 Created`), DTO maydonlari va TypeScript interfeyslari backenddagi mavjud kod bilan 1 to 1 to'g'ri kelishi shart. O'ylab topilgan yoki taxminiy maydonlar yozish qat'iyan taqiqlanadi.
 - **Frontend Dasturchi Perspektivasi**: Hujjatlar frontendchiga tushunarli bo'lishi lozim: har bir endpoint uchun aniq URL, majburiy sarlavhalar (`Authorization: Bearer <token>`, `X-Project-Id: <id>`), Request JSON namunasi, Response JSON yoki TypeScript tipi va yuz berishi mumkin bo'lgan xatoliklar (`400`, `401`, `403`, `404`) ko'rsatiladi.
 - **Mavjud format va uslubni saqlash**: `FRONTEND_INTEGRATION_GUIDE.md` dagi mavjud markdown tuzilishi, GitHub alertlari (`> [!NOTE]`, `> [!IMPORTANT]`, `> [!WARNING]`), jadvallar va kod bloklari uslubi buzilmasligi shart.
-- **Changelog formati (`FRONTEND_LATEST_CHANGES.md`)**: Har bir yangilanish aniq sana (`## [YYYY-MM-DD] - Mavzu`), o'zgarish teglari (`[BREAKING]`, `[ADDED]`, `[CHANGED]`, `[REMOVED]`), frontendga ta'siri va Before/After misollari bilan qayd etilishi shart.
+- **`FRONTEND_LATEST_CHANGES.md` Ephemerallik (Faqat topshirilmagan yangi o'zgarishlar) Prinsipi**:
+  `FRONTEND_LATEST_CHANGES.md` fayli butun loyiha tarixining arxivi emas, balki backenddan frontend dasturchilariga **navbatdagi topshirilishi kerak bo'lgan faol o'zgarishlar ro'yxati (buffer/scratchpad)** hisoblanadi. O'zgarishlar frontend jamoasiga berilgach, bu fayl tozalanadi (bo'shatiladi).
+  - **Qat'iy taqiq (Anti-Rollback)**: Agar `FRONTEND_LATEST_CHANGES.md` bo'shatilgan yoki tozalangan bo'lsa, uni aslo git yoki oldingi versiyalar orqali orqaga qaytarma (rollback/checkout qilma)!
+  - Agar fayl bo'sh bo'lsa, uni yangidan boshlab, faqat joriy yangi o'zgarishni yoz.
+  - Agar faylda hali berilmagan o'zgarishlar mavjud bo'lsa, yangisini tepaga qo'sh.
 
 ---
 
@@ -40,9 +44,12 @@ Maqsad: `$project` (Apex Support) loyihasidagi controllerlar, DTO lar, WebSocket
 3. Agar mutlaqo yangi endpoint qo'shilgan bo'lsa, uni mantiqan tegishli bo'limga to'liq spetsifikatsiya (URL, Headers, Request, Response, TypeScript type) bilan qo'sh.
 
 ### 3-QADAM: `FRONTEND_LATEST_CHANGES.md` ga changelog kiritish
-1. Faylning yuqori qismiga yangi sana bloki bilan o'zgarishlar xulosasini kirit:
+1. Faylning joriy holatini tekshir:
+   - **Agar fayl bo'sh bo'lsa**: Avvalgi o'zgarishlar frontendga topshirilib tozalangan deb hisobla. Yangi sarlavha (`# 🚀 Frontend uchun So'nggi O'zgarishlar (Latest Updates)`) bilan faqat joriy yangi o'zgarishni yoz. Eski ma'lumotlarni aslo tiklama!
+   - **Agar faylda hali topshirilmagan ma'lumotlar bo'lsa**: Yangi o'zgarishni eng tepaga qo'sh.
+2. Yangi o'zgarish bloki tuzilishi:
    - **Sana va Versiya**: `## [YYYY-MM-DD] - [Mavzu]`
-   - **Teg**: `[BREAKING]` (agar mavjud frontend kodiga ta'sir qilsa), `[CHANGED]`, `[ADDED]`, `[DEPRECATED]`
+   - **Teglar**: `[BREAKING]` (agar mavjud frontend kodiga ta'sir qilsa), `[CHANGED]`, `[ADDED]`, `[REMOVED]`, `[DEPRECATED]`
    - **Frontendga ta'siri (Action Required)**: Frontend dasturchi nimalarni o'zgartirishi kerak?
    - **Misol**: So'rov yoki javobning Oldin (Before) vs Keyin (After) holati.
 
