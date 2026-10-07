@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboard.md",
+                "file": "skills/clean-review.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Dashboard"
+              "title": "clean-review"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dashboard.md",
+                "file": "skills/clean-review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dashboard.md",
+                "file": "skills/clean-review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dashboard.md",
+                "file": "skills/clean-review.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,11 +202,13 @@
   },
   "active": "8ae7fe44f45e36c7",
   "lastOpenFiles": [
-    "skills/commit-msg.md",
-    "skills/git-branch-review.md",
     "skills/skill-creator.md",
-    "README.md",
+    "skills/implement.md",
+    "skills/git-branch-review.md",
+    "skills/commit-msg.md",
+    "skills/clean-review.md",
     "Dashboard.md",
+    "README.md",
     "skills/Untitled.md",
     "skills/quick-hello.md.md",
     "integrations/antigravity.md",

@@ -13,6 +13,7 @@ Maqsad: Foydalanuvchi ko'rsatgan `$target` (fayl, sinf, funksiya yoki paket)ni C
 
 ## Strict Constraints (Qat'iy qoidalar)
 - **1-Faza (Review) davomida fayllarga UMUMAN teginma**: Foydalanuvchi chatda aniq `/implement` yoki "tasdiqlayman" deb yozmaguncha, loyiha fayllariga birorta o'zgartirish kiritish, yangi fayl yaratish yoki mavjudini o'chirish QAT'IYAN TAQIQLANADI (faqat read-only rejim).
+- **Fikr-mulohazalar (Iterative Feedback) rejimi**: Agar foydalanuvchi biror joyi haqida savol bersa, e'tiroz bildirsa yoki qayta `/clean-review` deb yozsa, ASLO implementation'ga o'tib ketma! Foydalanuvchi bildirgan fikr asosida rejaga tuzatish kirit, yangilangan rejani ko'rsat va yana tasdiq kut. FAQAT `/implement` kelgandagina kodni o'zgartir.
 - **Biznes mantig'i va shartnomalar (Contracts) daxlsizligi**: Refaktoring faqat kodning tuzilishi, o'qilishi va texnik sifatini yaxshilaydi; tashqi API shartnomalari, DTO maydonlari va kutilgan biznes natijalari o'zgarmasligi shart.
 - **Loyiha til va stekiga moslik**:
   - **Kotlin / Spring Boot**: Kotlin 2.1 idiomlari, `@ConfigurationProperties`, thin controllerlar, alohida domen istisnolari (string contains yo'q), N+1 querylardan holi repositorylar, keraksiz "What" izohlarisiz self-documenting kod.
