@@ -43,20 +43,22 @@ Plaginlar va sozlamalarni qo'lda o'rnatish shart emas — barcha konfiguratsiyal
 - **`Dashboard.md`** — Dataview orqali barcha skillar, ularning parametrlari va teglarini ko'rsatuvchi asosiy boshqaruv paneli.
 - **`skills/`** — Barcha faol agent skillari (`.md`).
 - **`templates/`** — Yangi skill yaratish uchun universal shablon.
-- **`integrations/`** — Turli agentlar (Antigravity, Claude, Cursor) uchun integratsiya qo'llanmalari.
 - **`.agent/workflows`** — Antigravity agenti uchun avtomatik Slash (`/`) komandalar bog'lanmasi (symlink).
+- **`.cursor/rules`** — Cursor & Codex agentlari uchun qoidalar bog'lanmasi (symlink).
 
 ---
 
 ## 🛠️ Loyihalarga qanday ulanadi?
 
-### 1-usul: Antigravity Workspace sifatida (Eng osoni — Tavsiya etiladi ⭐)
-Antigravity loyihangizga (`Folders` bo'limiga) ushbu `obsidian/` papkasini qo'shib qo'ying. Shunda har qanday loyihada ishlaganda ham barcha skillar avtomatik ravishda `/` menyusida chiqadi (hech qanday nusxalash shart emas).
+### 1. Antigravity & Cursor Workspace sifatida (Eng osoni — Tavsiya etiladi ⭐)
+Antigravity yoki Cursor loyihangizga (`Folders` / `Add Folder to Workspace` bo'limiga) ushbu `obsidian/` papkasini qo'shib qo'ying. Shunda har qanday loyihada ishlaganda ham barcha skillar avtomatik ravishda Antigravity'da `/` menyusida, Cursor'da esa `@rules` da chiqadi (hech qanday qo'lda nusxalash shart emas).
 
-### 2-usul: Boshqa agentlar uchun (Claude Code / Cursor)
-- **Claude Code:** `.claude/commands` papkasiga ulanadi.
-- **Cursor / Copilot:** `.cursor/rules` papkasiga bog'lanadi.
-*(Batafsil ma'lumot `integrations/` papkasidagi fayllarda keltirilgan).*
+### 2. Claude Code uchun (Global rejim)
+Butun kompyuteringizdagi barcha loyihalar uchun 1 marta buyruq berish kifoya:
+```bash
+mkdir -p ~/.claude
+ln -sfn ~/Desktop/obsidian/skills ~/.claude/commands
+```
 
 ---
 
