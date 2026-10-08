@@ -13,6 +13,7 @@ Maqsad: Ushbu suhbat doirasida `/clean-review` yoki oldingi tahlil bosqichida ke
 - **Faqat kelishilgan reja asosida ishla**: Suhbatda tasdiqlangan refaktoring rejasi doirasidan chetga chiqma, o'zboshimchalik bilan ortiqcha fayllarni o'zgartirma.
 - **Biznes mantig'ini buzma**: Mavjud tashqi API shartnomalari, DTO maydonlari va kutilgan natijalarga putur yetkazma.
 - **Toza kod qoidalariga rioya qil**: Ortiqcha "What" izohlarini, vaqtinchalik debug print/loglarini qoldirma.
+- **Xalqaro Til Standarti (Faqat Professional Ingliz tili)**: Kodga kiritiladigan barcha exception xabarlari, loglar va validatsiya matnlari 100% professional Ingliz tilida bo'lishi shart. O'zbekcha yoki aralash tillar kodga kiritilmaydi.
 - **Tekshiruv o'tkaz**: O'zgarishlar kiritilgach, loyihaning kompilyatsiyasini (`./gradlew compileKotlin` yoki `npm run build` va h.k.) albatta tekshir.
 
 ## Execution Workflow (Bajarish ketma-ketligi)
