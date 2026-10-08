@@ -1,10 +1,9 @@
 ---
 name: {{title}}
-description: "Qisqacha tavsifi"
-tags: [soha]
+description: "Ushbu skill nima qilishi va qachon ishlatilishi haqida 1 jumlalik aniq tavsif (Antigravity Semantic Discovery uchun)"
+tags: [soha, kategoriya]
 version: "1.0.0"
 param1: "qiymat"
-param2: "qiymat"
 ---
 
 # Role & Objective

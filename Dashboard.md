@@ -4,10 +4,12 @@ Quyida barcha mavjud skillar, ularning versiyasi, tavsifi va teglari avtomatik y
 
 ```dataview
 TABLE 
+    name as "Skill Nomi",
     version as "Versiya",
     description as "Tavsifi",
     tags as "Teglar",
     file.mtime as "Oxirgi o'zgarish"
 FROM "skills"
-SORT file.name ASC
+WHERE file.name = "SKILL"
+SORT default(name, file.folder) ASC
 ```
