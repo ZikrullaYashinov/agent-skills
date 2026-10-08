@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "skills/apex-support-docs-sync/SKILL.md",
+                "file": "skills/docs-complete/SKILL.md",
                 "mode": "preview",
                 "source": true
               },
@@ -202,6 +202,15 @@
   },
   "active": "8ae7fe44f45e36c7",
   "lastOpenFiles": [
+    "skills/apex-support-docs-sync/SKILL.md",
+    "skills/docs-sync/SKILL.md",
+    "skills/docs-sync",
+    "skills/docs-complete/SKILL.md",
+    "skills/docs-complete",
+    "skills/docs-plan/SKILL.md",
+    "skills/docs-plan",
+    "skills/docs-init/SKILL.md",
+    "skills/docs-init",
     "templates/skill-template.md",
     "README.md",
     "Dashboard.md",
@@ -217,11 +226,6 @@
     "skills/git-branch-review/SKILL.md",
     "skills/commit-msg/SKILL.md",
     "skills/clean-review/SKILL.md",
-    "skills/apex-support-docs-sync/SKILL.md",
-    "skills/skill-creator",
-    "skills/implement",
-    "skills/git-branch-review",
-    "skills/commit-msg",
     "skills/clean-review.md",
     "skills/implement.md",
     "skills/skill-creator.md",
@@ -234,9 +238,6 @@
     "integrations/cursor-codex.md",
     "integrations/claude-code.md",
     "skills/antigravity-sync.md",
-    "skills/git-branch-review1.md.md",
-    "Untitled.canvas",
-    "skills/docker-optimize.md.md",
-    "Untitled.md"
+    "Untitled.canvas"
   ]
 }
