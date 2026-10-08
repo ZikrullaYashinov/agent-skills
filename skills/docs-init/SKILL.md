@@ -56,7 +56,12 @@ my-project/
    - Ishchi katalogdagi konfiguratsion fayllarni (`build.gradle.kts`, `pom.xml`, `package.json`, `Dockerfile`) tekshirib, loyiha turini (Backend, Frontend, Fullstack) aniqla.
 2. **Kataloglarni tekshirish va yaratish**:
    - `docs/architecture/adr`, `docs/integrations`, `docs/modules`, `docs/tasks/01-draft`, `docs/tasks/02-planned`, `docs/tasks/03-completed`, `docs/tasks/archive` papkalarini mavjudligini tekshir va yetishmayotganlarini och.
-3. **Standart fayllar va shablonlarni joylashtirish**:
+3. **Nostandart va Eski Hujjatlarni Migratsiya Qilish (Legacy Audit & Migration)**:
+   - Agar loyihada nostandart kataloglar (masalan: `docs/features/`, `docs/marketing/`, `docs/roadmap/`) mavjud bo'lsa:
+     - Xom takliflar, spetsifikatsiyalar va rejalar -> `docs/tasks/01-draft/` ga ko'chiriladi.
+     - Umumiy strategik `ROADMAP.md` -> `docs/architecture/roadmap.md` ga ko'chiriladi va linklari to'g'rilanadi.
+     - Bo'shab qolgan eski nostandart papkalar xavfsiz o'chiriladi (tozalanadi).
+4. **Standart fayllar va shablonlarni joylashtirish**:
    - Agar mavjud bo'lmasa, `docs/tasks/01-draft/template.md` shablonini yarat:
      ```markdown
      # Task: [Task Nomi]
