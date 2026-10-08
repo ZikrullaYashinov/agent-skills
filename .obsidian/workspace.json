@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "66c4e6209c04ff4b",
+        "id": "d08911cd6d0d6f8c",
         "type": "tabs",
         "children": [
           {
-            "id": "8ae7fe44f45e36c7",
+            "id": "77d6f8e03dfc2ebe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "skills/docs-complete/SKILL.md",
+                "file": "skills/status-report/SKILL.md",
                 "mode": "preview",
                 "source": true
               },
@@ -200,12 +200,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8ae7fe44f45e36c7",
+  "active": "77d6f8e03dfc2ebe",
   "lastOpenFiles": [
+    "skills/status-report/SKILL.md",
+    "skills/docs-complete/SKILL.md",
+    "skills/status-report",
     "skills/apex-support-docs-sync/SKILL.md",
     "skills/docs-sync/SKILL.md",
     "skills/docs-sync",
-    "skills/docs-complete/SKILL.md",
     "skills/docs-complete",
     "skills/docs-plan/SKILL.md",
     "skills/docs-plan",
@@ -220,7 +222,6 @@
     "skills/git-branch-review.md.bak",
     "skills/commit-msg.md.bak",
     "skills/clean-review.md.bak",
-    "skills/apex-support-docs-sync.md.bak",
     "skills/skill-creator/SKILL.md",
     "skills/implement/SKILL.md",
     "skills/git-branch-review/SKILL.md",
@@ -237,7 +238,6 @@
     "integrations/universal-init.md",
     "integrations/cursor-codex.md",
     "integrations/claude-code.md",
-    "skills/antigravity-sync.md",
     "Untitled.canvas"
   ]
 }
