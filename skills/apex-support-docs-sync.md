@@ -48,10 +48,10 @@ Maqsad: `$project` (Apex Support) loyihasidagi controllerlar, DTO lar, WebSocket
    - **Agar fayl bo'sh bo'lsa**: Avvalgi o'zgarishlar frontendga topshirilib tozalangan deb hisobla. Yangi sarlavha (`# 🚀 Frontend uchun So'nggi O'zgarishlar (Latest Updates)`) bilan faqat joriy yangi o'zgarishni yoz. Eski ma'lumotlarni aslo tiklama!
    - **Agar faylda hali topshirilmagan ma'lumotlar bo'lsa**: Yangi o'zgarishni eng tepaga qo'sh.
 2. Yangi o'zgarish bloki tuzilishi:
-   - **Sana va Versiya**: `## [YYYY-MM-DD] - [Mavzu]`
-   - **Teglar**: `[BREAKING]` (agar mavjud frontend kodiga ta'sir qilsa), `[CHANGED]`, `[ADDED]`, `[REMOVED]`, `[DEPRECATED]`
+   - **Sana va Sarlavha**: `## [YYYY-MM-DD] - Mavzu `[BREAKING]` `[REMOVED]`` (Markdown linter `[text][label]` havolasi deb xato bermasligi uchun teglarni alohida backtick `` `[TAG]` `` ichida yozish shart).
+   - **Teglar**: `[BREAKING]`, `[CHANGED]`, `[ADDED]`, `[REMOVED]`, `[DEPRECATED]`
    - **Frontendga ta'siri (Action Required)**: Frontend dasturchi nimalarni o'zgartirishi kerak?
-   - **Misol**: So'rov yoki javobning Oldin (Before) vs Keyin (After) holati.
+   - **Misol**: So'rov yoki javobning Oldin (Before) vs Keyin (After) holati. Kod namunalarida JSX/React komponentlari bo'lsa, til sifatida `tsx` ishlatilsin (````tsx).
 
 ### 4-QADAM: Hisobot taqdim etish
 Foydalanuvchiga qaysi fayllar yangilangani, qaysi endpointlar va kontraktlar sinxronlanganini ko'rsat.
