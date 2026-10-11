@@ -1,6 +1,6 @@
 ---
 name: docs
-description: Loyiha hujjatlari va vazifalar hayotiy siklini (Docs & Task Lifecycle: init, plan, complete, sync) to'liq boshqaradi.
+description: Loyiha hujjatlari va vazifalar hayotiy siklini (Docs & Task Lifecycle init, plan, complete, sync) to'liq boshqaradi.
 tags: [docs, documentation, architecture, task-lifecycle, spec, planning, sync, living-docs]
 version: "2.0.0"
 action: ""
